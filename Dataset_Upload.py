@@ -18,7 +18,6 @@ st.session_state.dataset_file = dataset_file
 if st.session_state.dataset_file is None:
     st.write("No Dataset yet")
 else:
-    # read data
     df = pd.read_parquet(st.session_state.dataset_file)
     st.session_state.dataset = df
     st.write(df.head())
